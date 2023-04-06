@@ -1,0 +1,49 @@
+# Standards: 1.2
+---
+- name: Download repo key
+  get_url:
+    url: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x52B59B1571A79DBC054901C0F6BC817356A3D45E
+    dest: /etc/apt/trusted.gpg.d/golang.asc
+  tags:
+    - golang
+
+- name: Add apt repository
+  apt_repository:
+    repo: "deb https://ppa.launchpadcontent.net/longsleep/golang-backports/ubuntu {{ ansible_distribution_release }} main"
+    filename: golang
+    update_cache: True
+    state: present
+  tags:
+    - golang
+
+- name: Install required packages
+  loop: "{{ golang_versions }}"
+  package:
+    name: "golang-{{ item }}"
+    state: present
+  tags:
+    - golang
+
+- name: Drop outdated packages
+  loop: "{{ golang_purge }}"
+  package:
+    name: "golang-{{ item }}"
+    state: absent
+  tags:
+    - golang
+
+- name: Symlink golang executable
+  when: golang_symlink | default(False)
+  loop:
+    - go
+    - gofmt
+  file:
+    src: "/usr/lib/go-{{ golang_symlink }}/bin/{{ item }}"
+    dest: "/usr/bin/{{ item }}"
+    owner: root
+    group: root
+    state: link
+  tags:
+    - kubeone
+
+...
