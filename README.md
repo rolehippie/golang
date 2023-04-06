@@ -5,7 +5,7 @@
 [![Readme Workflow](https://github.com/rolehippie/golang/actions/workflows/readme.yml/badge.svg)](https://github.com/rolehippie/golang/actions/workflows/readme.yml)
 [![Galaxy Workflow](https://github.com/rolehippie/golang/actions/workflows/galaxy.yml/badge.svg)](https://github.com/rolehippie/golang/actions/workflows/galaxy.yml)
 [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/golang)](https://github.com/rolehippie/golang/blob/master/LICENSE)
-[![Ansible Role](https://img.shields.io/ansible/role/108900)](https://galaxy.ansible.com/rolehippie/golang)
+[![Ansible Role](https://img.shields.io/ansible/role/61886)](https://galaxy.ansible.com/rolehippie/golang)
 
 Ansible role to install golang programming language.
 
