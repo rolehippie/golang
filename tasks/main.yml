@@ -44,6 +44,6 @@
     group: root
     state: link
   tags:
-    - kubeone
+    - golang
 
 ...
