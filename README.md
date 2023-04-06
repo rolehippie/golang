@@ -69,8 +69,6 @@ golang_versions:
 
 **_golang_**
 
-**_kubeone_**
-
 
 ## Dependencies
 
