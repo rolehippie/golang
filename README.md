@@ -5,7 +5,7 @@
 [![Readme Workflow](https://github.com/rolehippie/golang/actions/workflows/readme.yml/badge.svg)](https://github.com/rolehippie/golang/actions/workflows/readme.yml)
 [![Galaxy Workflow](https://github.com/rolehippie/golang/actions/workflows/galaxy.yml/badge.svg)](https://github.com/rolehippie/golang/actions/workflows/galaxy.yml)
 [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/golang)](https://github.com/rolehippie/golang/blob/master/LICENSE)
-[![Ansible Role](https://img.shields.io/ansible/role/61886)](https://galaxy.ansible.com/rolehippie/golang)
+[![Ansible Role](https://img.shields.io/badge/role-rolehippie.golang-blue)](https://galaxy.ansible.com/rolehippie/golang)
 
 Ansible role to install golang programming language.
 
@@ -15,7 +15,6 @@ Building and improving this Ansible role have been sponsored by my current and p
 
 ## Table of content
 
-- [Requirements](#requirements)
 - [Default Variables](#default-variables)
   - [golang_purge](#golang_purge)
   - [golang_symlink](#golang_symlink)
@@ -26,11 +25,6 @@ Building and improving this Ansible role have been sponsored by my current and p
 - [Author](#author)
 
 ---
-
-## Requirements
-
-- Minimum Ansible version: `2.10`
-
 
 ## Default Variables
 
