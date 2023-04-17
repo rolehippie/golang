@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/rolehippie/golang/compare/v1.0.1...v1.1.0) (2023-04-17)
+
+
+### Features
+
+* more flexible keyring, reduce lint error to warning ([eb48c90](https://github.com/rolehippie/golang/commit/eb48c90cd498f1e6fe84439c0ef2bdf63f4871b4))
+* use correct keyrings path for deb repo ([3cfdeff](https://github.com/rolehippie/golang/commit/3cfdeff53c2cef598ac1af970f06176796f7950b))
+
 ## [1.0.1](https://github.com/rolehippie/golang/compare/v1.0.0...v1.0.1) (2023-04-10)
 
 
