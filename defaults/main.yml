@@ -10,4 +10,7 @@ golang_versions:
 # @var golang_purge:description: List of versions to purge
 golang_purge: []
 
+# @var golang_keyring:description: Path for the repository keyring
+golang_keyring: /usr/share/keyrings/golang-archive-keyring.gpg
+
 ...
