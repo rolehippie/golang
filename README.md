@@ -17,6 +17,7 @@ Building and improving this Ansible role have been sponsored by my current and p
 
 - [Requirements](#requirements)
 - [Default Variables](#default-variables)
+  - [golang_keyring](#golang_keyring)
   - [golang_purge](#golang_purge)
   - [golang_symlink](#golang_symlink)
   - [golang_versions](#golang_versions)
@@ -33,6 +34,16 @@ Building and improving this Ansible role have been sponsored by my current and p
 
 
 ## Default Variables
+
+### golang_keyring
+
+Path for the repository keyring
+
+#### Default value
+
+```YAML
+golang_keyring: /usr/share/keyrings/golang-archive-keyring.gpg
+```
 
 ### golang_purge
 
