@@ -1,4 +1,3 @@
-# Standards: 1.2
 ---
 # @var golang_symlink:description: Version to symlink binaries
 golang_symlink: "1.20"
