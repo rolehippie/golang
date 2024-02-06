@@ -1,13 +1,13 @@
 ---
 - name: Download repo key
-  shell:
+  ansible.builtin.shell:
     cmd: "curl -sSL 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x52B59B1571A79DBC054901C0F6BC817356A3D45E' | gpg --dearmor --output {{ golang_keyring }}"
     creates: "{{ golang_keyring }}"
   tags:
     - golang
 
 - name: Add apt repository
-  apt_repository:
+  ansible.builtin.apt_repository:
     repo: "deb [signed-by={{ golang_keyring }}] https://ppa.launchpadcontent.net/longsleep/golang-backports/ubuntu {{ ansible_distribution_release }} main"
     filename: golang
     update_cache: True
@@ -17,7 +17,7 @@
 
 - name: Install required packages
   loop: "{{ golang_versions }}"
-  package:
+  ansible.builtin.package:
     name: "golang-{{ item }}"
     state: present
   tags:
@@ -25,7 +25,7 @@
 
 - name: Drop outdated packages
   loop: "{{ golang_purge }}"
-  package:
+  ansible.builtin.package:
     name: "golang-{{ item }}"
     state: absent
   tags:
@@ -36,7 +36,7 @@
   loop:
     - go
     - gofmt
-  file:
+  ansible.builtin.file:
     src: "/usr/lib/go-{{ golang_symlink }}/bin/{{ item }}"
     dest: "/usr/bin/{{ item }}"
     owner: root
