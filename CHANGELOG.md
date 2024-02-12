@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.0](https://github.com/rolehippie/golang/compare/v1.1.0...v2.0.0) (2024-02-12)
+
+
+### Features
+
+* drop support for ubuntu 18.04 ([c3488f3](https://github.com/rolehippie/golang/commit/c3488f3d979a92558f359848a90e8949b67f7d72))
+* used full qualified collection names ([29758db](https://github.com/rolehippie/golang/commit/29758db727d416aa32d520265ae8974637cd8e72))
+
 ## [1.1.0](https://github.com/rolehippie/golang/compare/v1.0.1...v1.1.0) (2023-04-17)
 
 
