@@ -1,8 +1,28 @@
 ---
 - name: Download repo key
-  ansible.builtin.shell:
-    cmd: "curl -sSL 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x52B59B1571A79DBC054901C0F6BC817356A3D45E' | gpg --dearmor --output {{ golang_keyring }}"
-    creates: "{{ golang_keyring }}"
+  register: golang_key_download
+  ansible.builtin.get_url:
+    url: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x52B59B1571A79DBC054901C0F6BC817356A3D45E
+    dest: "{{ golang_keyring }}.asc"
+    mode: u=rw,g=r,o=r
+    force: true
+  tags:
+    - golang
+
+- name: Check repo key
+  register: golang_key_status
+  ansible.builtin.stat:
+    path: "{{ golang_keyring }}"
+  tags:
+    - golang
+
+- name: Dearmor repo key
+  when:
+    - golang_key_download.changed or not golang_key_status.stat.exists
+  register: golang_key_convert
+  changed_when: golang_key_convert.rc == 0
+  ansible.builtin.command:
+    cmd: "gpg --dearmor -o {{ golang_keyring }} {{ golang_keyring }}.asc"
   tags:
     - golang
 
@@ -10,7 +30,7 @@
   ansible.builtin.apt_repository:
     repo: "deb [signed-by={{ golang_keyring }}] https://ppa.launchpadcontent.net/longsleep/golang-backports/ubuntu {{ ansible_distribution_release }} main"
     filename: golang
-    update_cache: True
+    update_cache: true
     state: present
   tags:
     - golang
@@ -32,7 +52,8 @@
     - golang
 
 - name: Symlink golang executable
-  when: golang_symlink | default(False)
+  when:
+    - false if golang_symlink is none else (golang_symlink | length > 0)
   loop:
     - go
     - gofmt

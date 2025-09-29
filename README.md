@@ -1,4 +1,4 @@
-# workspace
+# golang
 
 [![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/golang)
 [![General Workflow](https://github.com/rolehippie/golang/actions/workflows/general.yml/badge.svg)](https://github.com/rolehippie/golang/actions/workflows/general.yml)
@@ -61,7 +61,7 @@ Version to symlink binaries
 #### Default value
 
 ```YAML
-golang_symlink: '1.20'
+golang_symlink: '1.25'
 ```
 
 ### golang_versions
@@ -72,7 +72,7 @@ List of versions to install
 
 ```YAML
 golang_versions:
-  - '1.20'
+  - '1.25'
 ```
 
 ## Discovered Tags

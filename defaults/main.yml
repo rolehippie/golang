@@ -1,10 +1,10 @@
 ---
 # @var golang_symlink:description: Version to symlink binaries
-golang_symlink: "1.20"
+golang_symlink: "1.25"
 
 # @var golang_versions:description: List of versions to install
 golang_versions:
-  - "1.20"
+  - "1.25"
 
 # @var golang_purge:description: List of versions to purge
 golang_purge: []
