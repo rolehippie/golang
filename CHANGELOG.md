@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/rolehippie/golang/compare/v2.0.0...v2.1.0) (2025-10-06)
+
+
+### Features
+
+* apply new repo structure and update linting and integrate noble ([3d52826](https://github.com/rolehippie/golang/commit/3d52826b26ca99028bd226aa8e8336ce322f6e86))
+
 ## [2.0.0](https://github.com/rolehippie/golang/compare/v1.1.0...v2.0.0) (2024-02-12)
 
 
