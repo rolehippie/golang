@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/rolehippie/golang/compare/v2.2.0...v2.3.0) (2026-08-10)
+
+### Dependencies
+
+* **minor:** update dependency pipx:ansible-doctor to v8.4.0 ([#46](https://github.com/rolehippie/golang/issues/46)) ([cf849dc](https://github.com/rolehippie/golang/commit/cf849dc078e5dde835cc25b562e17b3c78ec91c1))
+* **patch:** update dependency python to v3.14.7 ([#44](https://github.com/rolehippie/golang/issues/44)) ([3ef2c7a](https://github.com/rolehippie/golang/commit/3ef2c7aed1a92dafd45cc8c75dc44044c2ce77ef))
+
 ## [2.2.0](https://github.com/rolehippie/golang/compare/v2.1.0...v2.2.0) (2026-07-27)
 
 ## [2.1.0](https://github.com/rolehippie/golang/compare/v2.0.0...v2.1.0) (2025-10-06)
