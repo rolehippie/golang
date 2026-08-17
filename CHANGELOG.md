@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.4.0](https://github.com/rolehippie/golang/compare/v2.3.0...v2.4.0) (2026-08-17)
+
+### Dependencies
+
+* **minor:** update dependency pipx:molecule to v26.8.0 ([#50](https://github.com/rolehippie/golang/issues/50)) ([ad438f5](https://github.com/rolehippie/golang/commit/ad438f5271be1999b5d0c6dd76ea9d536f7a71ba))
+* **patch:** update dependency pipx:ansible-core to v2.21.3 ([#47](https://github.com/rolehippie/golang/issues/47)) ([ce61013](https://github.com/rolehippie/golang/commit/ce6101342f98b6aa5d596b45312c7af685346d76))
+* **patch:** update dependency pre-commit to v4.6.2 ([#48](https://github.com/rolehippie/golang/issues/48)) ([597b3a4](https://github.com/rolehippie/golang/commit/597b3a4ae57b9ae2fbd5fcbef1e57654812cae9d))
+
 ## [2.3.0](https://github.com/rolehippie/golang/compare/v2.2.0...v2.3.0) (2026-08-10)
 
 ### Dependencies
