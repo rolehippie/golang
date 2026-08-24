@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.5.0](https://github.com/rolehippie/golang/compare/v2.4.0...v2.5.0) (2026-08-24)
+
+### Dependencies
+
+* **minor:** update dependency pipx:ansible-lint to v26.8.0 ([#49](https://github.com/rolehippie/golang/issues/49)) ([e385b4b](https://github.com/rolehippie/golang/commit/e385b4b4475824fa3bd28c3cbcd109134d993903))
+
 ## [2.4.0](https://github.com/rolehippie/golang/compare/v2.3.0...v2.4.0) (2026-08-17)
 
 ### Dependencies
