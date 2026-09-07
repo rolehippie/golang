@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0](https://github.com/rolehippie/golang/compare/v2.5.1...v2.6.0) (2026-09-07)
+
+### Features
+
+* add separate requirements for molecule run ([70c0766](https://github.com/rolehippie/golang/commit/70c0766286f9a2f559c60497be0e9a602f105081))
+* use new required facts as attributes ([00431e9](https://github.com/rolehippie/golang/commit/00431e9c45b194e71caf674a5bc58c68c64ba07a))
+
 ## [2.5.1](https://github.com/rolehippie/golang/compare/v2.5.0...v2.5.1) (2026-08-31)
 
 ### Dependencies
