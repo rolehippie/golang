@@ -22,13 +22,13 @@
   register: golang_key_convert
   changed_when: golang_key_convert.rc == 0
   ansible.builtin.command:
-    cmd: "gpg --dearmor -o {{ golang_keyring }} {{ golang_keyring }}.asc"
+    cmd: "gpg --batch --yes --dearmor -o {{ golang_keyring }} {{ golang_keyring }}.asc"
   tags:
     - golang
 
 - name: Add apt repository
   ansible.builtin.apt_repository:
-    repo: "deb [signed-by={{ golang_keyring }}] https://ppa.launchpadcontent.net/longsleep/golang-backports/ubuntu {{ ansible_distribution_release }} main"
+    repo: "deb [signed-by={{ golang_keyring }}] https://ppa.launchpadcontent.net/longsleep/golang-backports/ubuntu {{ ansible_facts['distribution_release'] }} main"
     filename: golang
     update_cache: true
     state: present
